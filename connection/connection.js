@@ -3,7 +3,7 @@ require('dotenv').config();
 
 
 const connect= ()=>{
-    mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@quizproject.ljrwjan.mongodb.net/quiz_app?retryWrites=true&w=majority`,{
+    mongoose.connect(`${process.env.MONGO_URL}`,{
        },(err)=>{
         if(err){
             console.log(err)
